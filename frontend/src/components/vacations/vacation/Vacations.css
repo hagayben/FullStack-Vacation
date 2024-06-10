@@ -1,0 +1,14 @@
+.Vacations {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.Vacations>div {
+    grid-column: span 4;
+    overflow: auto;
+}
+
+.Vacations>aside {
+    grid-column: span 1;
+    overflow: auto;
+}

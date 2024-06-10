@@ -1,0 +1,12 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  font-family: cursive;
+}
+.Menu a {
+  color: white;
+  font-style: italic;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}

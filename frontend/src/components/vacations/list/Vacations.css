@@ -1,0 +1,34 @@
+/* .Vacations>table,
+.Vacations th,
+.Vacations td {
+    margin: auto;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.Vacations img {
+    width: 50px;
+    vertical-align: middle;
+} */
+
+.pages {
+  background-color: gray;
+  padding: 10px;
+  width: fit-content;
+  margin: auto auto;
+  display: flex;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.page {
+  color: white;
+  /* font-style: italic; */
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent); */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}

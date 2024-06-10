@@ -1,0 +1,29 @@
+.heart
+{
+  width: fit-content;
+  height: min-content;
+  display: grid;
+}
+
+.heart >svg{
+  width: 20px;
+  height: 20px;
+}
+
+.UserOptions {
+  position: absolute;
+  top:5px;
+  left:5px;
+  display: flex;
+  gap: 10px;
+  height: min-content;
+  z-index: 9;
+  
+
+  
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px;
+  background-color: rgb(196, 206, 213);
+}

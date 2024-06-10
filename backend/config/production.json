@@ -1,0 +1,10 @@
+{
+    "mysql": {
+        "host": "localhost",
+        "user": "user",
+        "password": "",
+        "database": "vacation",
+        "port": 3307,
+        "connectionLimit": 10
+    }
+}

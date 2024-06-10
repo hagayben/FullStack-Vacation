@@ -1,0 +1,29 @@
+{
+    "app": {
+        "name": "fullstack vacation",
+        "port": 8080,
+        "protocol": "http",
+        "host": "localhost",
+        "secret": "shefi",
+        "jwt": {
+            "expires": "3h",
+            "secret": "shefi"
+        },
+        "limit":2,
+        "images":{
+            "path":"vacationImages"
+        },
+        "limiter":{
+            "windowMs":900000,
+            "limit":100
+        }
+    },
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "vacation",
+        "port": 3306,
+        "connectionLimit": 10
+    }
+}

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: vacation-database
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_TCP_PORT=3308
+      - MYSQL_DATABASE=vacation
+    ports:
+      - 3308:3308
+    # image: hagayben/vacation-database:1.0
+    build: 
+     ./database
+    command: --sql_mode=""
+
+    volumes:
+      - vacation-database:/var/lib/mysql
+  backend:
+    depends_on:
+      - database
+    container_name: vacation-backend
+    ports:
+      - 8080:8080
+    environment:
+      - NODE_ENV=compose
+    build: ./backend
+  frontend:
+    depends_on:
+      - backend
+    container_name: vacation-frontend
+    ports:
+      - 3000:80
+    build: ./frontend
+
+volumes:
+  vacation-database:
