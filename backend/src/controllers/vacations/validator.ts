@@ -3,8 +3,8 @@ import DTO from "../../models/vacations/vacation-dto";
 
 export const addVacationValidator = Joi.object<DTO>({
   id: Joi.string().optional(),
-  destination: Joi.string().alphanum().min(4).lowercase().required(),
-  description: Joi.string().alphanum().min(4).lowercase().required(),
+  destination: Joi.string().min(4).lowercase().required(),
+  description: Joi.string().min(4).lowercase().required(),
   startDate: Joi.date().iso().required(),
   endDate: Joi.date().iso().greater(Joi.ref("startDate")).required(),
   price: Joi.number().min(1).max(10000).required(),
@@ -18,8 +18,8 @@ export const addVacationValidator = Joi.object<DTO>({
 
 export const patchVacationValidator = Joi.object<DTO>({
     id: Joi.string().optional(),
-    destination: Joi.string().alphanum().min(4).lowercase(),
-    description: Joi.string().alphanum().min(4).lowercase(),
+    destination: Joi.string().min(4).lowercase(),
+    description: Joi.string().min(4).lowercase(),
     startDate: Joi.date().iso(),
     endDate: Joi.date().iso().greater(Joi.ref("startDate")),
     price: Joi.number().min(1).max(10000),
